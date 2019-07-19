@@ -789,6 +789,12 @@
 	color: #333333;
 	margin: 7px;
 }
+.tuijian-nav:hover{
+	border: 1px solid #F10180;
+}
+.tuijian-nav:hover>a{
+	color: #F10180;
+}
 
 .right2{
 	width: 73px;
@@ -1080,12 +1086,15 @@ body{
 }
 .right-center>ul{
 	width: 36px;
+	background: #262626;
+	height: 324px;
 }
 .right-center>ul>li{
 	width: 36px;
 	text-align: center;
 	font-size: 12px;
 	color: white;
+	background: #262626;
 	
 }
 .color-7{
@@ -1093,7 +1102,7 @@ body{
 	color: white;
 }
 
-.side-1{
+#side-1{
 	font-size: 14px;
 	margin-top: 2px;
 	margin-bottom: 4px;
@@ -1125,6 +1134,7 @@ body{
 
 .nav-1{
 	position: relative;
+	/*overflow: hidden;*/
 }
 .nav-side1{
 	width: 246px;
@@ -1133,11 +1143,13 @@ body{
 	border: 1px solid #cccccc;
 	position: absolute;
 	top: 0px;
-	left: -248px;
-	z-index: 200;
-	display: none;
+	left:248px;
+	z-index: -200;
+	transition: all .4s;
 }
-
+.nav-1:hover .nav-side1{
+	left: -248px;
+}
 .nav-side-1{
 	width: 246px;
 	height: 130px;
@@ -1179,28 +1191,30 @@ body{
 	line-height: 36px;
 	text-align: center;
 	position: relative;
+	background: #262626;
 }
 .right-bottom-1{
 	width: 100px;
 	height: 36px;
 	position: absolute;
 	top: 0px;
-	right: 36px;
+	right: -100px;
 	background: white;
 	box-sizing: border-box;
 	border: 1px solid #ccc;
-	z-index: 17;
+	z-index: -20;
 	font-size: 12px;
 	line-height: 36px;
 	text-align: center;
 	border-radius: 2px;
-	display: none;
+	transition: all 0.5s;
+	/*display: none;*/
 }
 .right-bottom>ul>li:hover{
 	background: #F10180;
 }
 .right-bottom>ul>li:hover>.right-bottom-1{
-	display: block;
+	right: 36px;
 }
 /***********优惠券*******************/
 .nav-side2,.nav-side3,.nav-side4,.nav-side5{
@@ -1211,7 +1225,7 @@ body{
     height: 34px;
     line-height: 34px;
     position: absolute;
-    left: -117px;
+    left: 117px;
     top: 0px;
     padding: 0 8px;
     border-radius: 3px 0 0 3px;
@@ -1220,29 +1234,29 @@ body{
     border-right: none;
     font-size: 14px;
     text-align: center;
-    z-index: 20;
+    z-index: -20;
     color: #333;
-    display: none;
+    transition: all 0.5s;
+    /*display: none;*/
 }
 .nav-side2:hover>.nav-side-3{
-	display: block;
+	left: -117px;
+}
+.nav-side2:link>.nav-side-3{
+	left: 117px;
 }
 .nav-side3:hover>.nav-side-3{
-	display: block;
+	left: -117px;
 }
 .nav-side4:hover>.nav-side-3{
-	display: block;
+	left: -117px;
 }
 .nav-side5:hover>.nav-side-3{
-	display: block;
+	left: -117px;
 }
 
 .nav-side-2>a:hover{
 	color: #F10180;
-}
-
-.nav-1:hover .nav-side1{
-	display: block;
 }
 
 .border-2{
@@ -1361,6 +1375,17 @@ body{
 .time-3{
 	left: 346px;
 	top: 4px;
+}
+/**************运动top***************************/
+.sport{
+	height:112px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.sport>a>img{
+	width: 320px;
+	height: 112px;
+	margin-right: 10px;
 }
 /***********左侧快速选择专栏*****************************/
 .left-fix{
@@ -1550,7 +1575,8 @@ body{
 	height: 30px;
 	line-height: 30px;
 	position:absolute ;
-	bottom: 4px;
+	bottom: 0px;
+	left: 1px;
 	border: 1px solid #ccc;
 	z-index: 16;
 	display: none;
@@ -1761,10 +1787,17 @@ body{
 	box-sizing: border-box;
 	padding: 0px 100px;
 }
+
 .root-5>a:hover{
 	color: #F10180;
 }
-dd>a:hover{
+.dd{
+	transition: transform 0.5s;
+}
+.dd:hover{
+	transform:translateX(5px);
+}
+.root-2>dl>dd>a:hover{
 	color: #F10180;
 }
 /**************最后的页脚*****************************/
